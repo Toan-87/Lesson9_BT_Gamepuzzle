@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzle</title>
+</head>
+<body>
+<img src="image/funny-cat1_part1x1.jpg" id="image1" onclick="replaceImage1()" width="800" height="160">
+<br>
+<img src="image/funny-cat1_part2x1.jpg" id="image2" onclick="replaceImage2()" width="800" height="160">
+<br>
+<img src="image/funny-cat1_part3x1.jpg" id="image3" onclick="replaceImage3()" width="800" height="160">
+<br>
+<img src="image/funny-cat1_part4x1.jpg" id="image4" onclick="replaceImage4()" width="800" height="160">
+<br>
+<img src="image/funny-cat1_part5x1.jpg" id="image5" onclick="replaceImage5()" width="800" height="160">
+</body>
+<script>
+    let dem1 = 1;
+    let dem2 = 1;
+    let dem3 = 1;
+    let dem4 = 1;
+    let dem5 = 1;
+    function replaceImage1() {
+        dem1++;
+        if (dem1 === 1) {
+            document.getElementById('image1').src = 'image/monkey_part1x1.jpg';
+        }
+        else if (dem1 === 2) {
+            document.getElementById('image1').src = 'image/panda_swap_part1x1.jpg';
+        }
+        else {
+            document.getElementById('image1').src = 'image/funny-cat1_part1x1.jpg'
+            dem1 = 0;
+        }
+        check();
+    }
+    function replaceImage2() {
+        dem2++;
+        if (dem2 === 1) {
+            document.getElementById('image2').src = 'image/monkey_part2x1.jpg';
+        }
+        else if (dem2 === 2) {
+            document.getElementById('image2').src = 'image/panda_swap_part2x1.jpg';
+        }
+        else {
+            document.getElementById('image2').src = 'image/funny-cat1_part2x1.jpg'
+            dem2 = 0;
+        }
+        check();
+    }
+    function replaceImage3() {
+        dem3++;
+        if (dem3 === 1) {
+            document.getElementById('image3').src = 'image/monkey_part3x1.jpg';
+        }
+        else if (dem3 === 2) {
+            document.getElementById('image3').src = 'image/panda_swap_part3x1.jpg';
+        }
+        else {
+            document.getElementById('image3').src = 'image/funny-cat1_part3x1.jpg'
+            dem3 = 0;
+        }
+        check();
+    }
+    function replaceImage4() {
+        dem4++;
+        if (dem4 === 1) {
+            document.getElementById('image4').src = 'image/monkey_part4x1.jpg';
+        }
+        else if (dem4 === 2) {
+            document.getElementById('image4').src = 'image/panda_swap_part4x1.jpg';
+        }
+        else {
+            document.getElementById('image4').src = 'image/funny-cat1_part4x1.jpg'
+            dem4 = 0;
+        }
+        check();
+    }
+    function replaceImage5() {
+        dem5++;
+        if (dem5 === 1) {
+            document.getElementById('image5').src = 'image/monkey_part5x1.jpg';
+        }
+        else if (dem5 === 2) {
+            document.getElementById('image5').src = 'image/panda_swap_part5x1.jpg';
+        }
+        else {
+            document.getElementById('image5').src = 'image/funny-cat1_part5x1.jpg'
+            dem5 = 0;
+        }
+        check();
+    }
+    function check() {
+        if (dem1 ===dem2 && dem2 ===dem3 && dem3 ===dem4 && dem4 ===dem5) {
+            alert('Bạn đã ghép đúng');
+        }
+    }
+</script>
+</html>
